@@ -16,7 +16,7 @@ public class logic {
         Object [][] data = new Object[1000][1000];
         int count=0;
         for (Depot depot:dp){
-            data[count][0]=depot.getDepotID();
+            data[count][0]=depot.getDepotId();
             data[count][1]=depot.getName();
             data[count][2]=depot.getAddress();
             count++;
@@ -86,7 +86,7 @@ public class logic {
             data[count][4]=bloodPacket.getVolume();
             data[count][5]=bloodPacket.getStatus();
             data[count][6]=bloodPacket.getExpiry();
-            data[count][7]=bloodPacket.getDepotID();
+            data[count][7]=bloodPacket.getDepotId();
             data[count][8]=bloodPacket.getSeekerId();
             count++;
 
