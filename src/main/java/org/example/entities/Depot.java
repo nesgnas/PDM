@@ -19,12 +19,12 @@ public class Depot {
 
     @Id
     @Column(name = "DepotID")
-    private String DepotID;
+    private String depotId;
 
     @Column(name = "Address")
-    private String Address;
+    private String address;
     @Column(name = "Name")
-    private String Name;
+    private String name;
 
 
 

@@ -39,7 +39,7 @@ public class BloodPacket {
     private String expiry;
 
     @Column(name = "DepotID",insertable = false, updatable = false)
-    private String depotID;
+    private String depotId;
 
 
     @Column(name = "SeekerID", insertable = false, updatable = false)
