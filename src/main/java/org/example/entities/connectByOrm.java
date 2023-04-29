@@ -73,9 +73,9 @@ public class connectByOrm {
         return depots;
     }
 
-    public static void addAccount(String user,String pass, String type){
+    public static void addAccount(String user,String pass){
         EntityManager em = emf.createEntityManager();
-        Account account = new Account(user,pass,type);
+        Account account = new Account(user,pass,"normalAcount");
         em.getTransaction().begin();
         em.persist(account);
         System.out.println(account);
@@ -85,7 +85,7 @@ public class connectByOrm {
     }
 
 
-    public static String checkLogin(String user, String pass){
+    public static Boolean checkLogin(String user, String pass){
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
@@ -98,7 +98,7 @@ public class connectByOrm {
             if (account.getUserName().equals(user) && account.getPassWord().equals(pass)){
                 em.getTransaction().commit();
                 em.close();
-                return account.getTypeOfAccount();
+                return true;
             }
         }
 
@@ -106,7 +106,7 @@ public class connectByOrm {
 
         em.getTransaction().commit();
         em.close();
-        return "User not Found";
+        return false;
 
     }
 
